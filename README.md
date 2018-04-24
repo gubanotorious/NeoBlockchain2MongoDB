@@ -1,51 +1,51 @@
-# NeoBlockchain2MongoDB 
+# NeoBlockchain2MongoDB
 
-## 简介：
+## Introduction:
 
-该程序可以将 NeoBlockchain 中的数据转到 MongoDB 中，本程序可以当做区块链浏览器的入库程序。
+The program can transfer data from NeoBlockchain to MongoDB. This program can be used as a blockchain browser's warehousing program.
 
-支持通过智能合约注册的全局资产的显示，暂不支持 NEP-5 资产，之后会更新该程序使其支持 NEP-5。
+Support for the display of global assets registered through Smart Contracts will temporarily not support NEP-5 assets, and will be updated later to support NEP-5.
 
-## 使用方法：
+## Instructions:
 
-1、安装 MongoDB [下载链接](https://www.mongodb.com/download-center#community) [使用说明](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/)
+1. Install MongoDB [Download link] (https://www.mongodb.com/download-center#community) [Operating Instructions] (https://docs.mongodb.com/manual/tutorial/install-mongodb-on- Windows/)
 
-2、安装 neo-cli，并启动 rpc 服务 [安装说明](http://docs.neo.org/zh-cn/node/setup.html)  [命令参考](http://docs.neo.org/zh-cn/node/cli.html)
+2. Install neo-cli and start the rpc service [Installation Instructions] (http://docs.neo.org/en/node/setup.html) [Command Reference] (http://docs.neo.org /zh-cn/node/cli.html)
 
-3、在 App.config 配置 MongoDB 链接字符串和 neo-cli 的 rpc 请求地址
+3. Configure MongoDB link string and neo-cli rpc request address in App.config
 
-4、运行 NeoBlockchain2MongoDB 程序
+4. Run the NeoBlockchain2MongoDB program
 
-## 截图：
+## screenshot:
 
-截图来自 MongoDB 自带的可视化管理工具 MongoDB Compass Community 
+Screenshot from MongoDB's own visual management tool MongoDB Compass Community
 
-截图截止到区块高度 1038735（区块数为1038736）
+The screenshot ends at block height 1038735 (block number 1038736)
 
-集合
+set
 
 ![Address](Sreenshot/neo.png)
 
 Address
-记录所有地址，每个地址的交易（Transactions），每个地址的余额（Coins）
+Record all addresses, transactions for each address, balance for each address (Coins)
 ![Address](Sreenshot/Address.png)
 
 Asset
-记录所有资产，每个资产的名称、总量、精度、所有者、管理员、交易列表等信息
+Record all assets, each asset's name, total amount, precision, owner, administrator, transaction list and other information
 ![Asset](Sreenshot/Asset.png)
 
 Block
-记录所有区块的区块头以及交易 ID
+Record all block headers and transaction IDs
 ![Block](Sreenshot/Block.png)
 
 Coin
-记录所有 Coin，以及每一枚 Coin 资产 ID，资产名，数量，状态，来源和去向等信息
+Record all Coin, and each Coin asset ID, asset name, quantity, status, source and destination information
 ![Coin](Sreenshot/Coin.png)
 
 MinerTransaction
-记录所有 MinerTransaction，将 MinerTransaction 单独存储，以加快 Transaction 集合处理速度
+Record all MinerTransactions and store MinerTransaction separately to speed up Transaction collection processing
 ![MinerTransaction](Sreenshot/MinerTransaction.png)
 
 Transaction
-记录所有 Transaction，每个交易的详细信息，详细的交易输出以及交易输出
+Record all Transaction, details of each transaction, detailed transaction output, and transaction output
 ![Transaction](Sreenshot/Transaction.png)
